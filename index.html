@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+
+    <!-- Include Bootstrap CSS (You can use a CDN or local file) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h1 class="text-center">Sign Up Form</h1>
+          <form action="success.html">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                onkeyup="namevalidate()"
+                id="username"
+                type="text"
+                class="form-control"
+              />
+              <span id="username-error" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                onkeyup="emailvalidate()"
+                id="email"
+                type="text"
+                class="form-control"
+              />
+              <span id="mailerror" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                onkeyup="passwordvalidate()"
+                id="password"
+                type="password"
+                class="form-control"
+              />
+              <span id="passworderror" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+              <label for="repeat" class="form-label">Repeat Password</label>
+              <input
+                onkeyup="repeatvalidate()"
+                id="repeat"
+                type="password"
+                class="form-control"
+              />
+              <span id="repeaterror" class="text-danger"></span>
+            </div>
+            <button
+              id="button"
+              onclick="return validateForm()"
+              type="submit"
+              class="btn btn-primary"
+            >
+              Submit
+            </button>
+            <span id="submiterror" class="text-danger"></span>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
